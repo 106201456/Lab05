@@ -1,0 +1,230 @@
+/* Layout.css - Layout styles for Lab 5 */
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+header {
+    border: 1px solid darkgray;
+    margin: 0.5em;
+    padding: 0.5em;
+    background-color: lightgray;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Navigation menu */
+.menu {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #2980b9;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #e8f4fc;
+}
+
+/* Main content area */
+article {
+    min-width: 30em;
+    margin: 20px 0;
+}
+
+/* Aside styles */
+aside {
+    border: 4px inset purple;
+    border-radius: 14px;
+    margin: 1em;
+    padding: 1em;
+    width: 30%;
+    background: url('images/fade.jpg') repeat-x top left;
+    float: right;
+    box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+/* Override the lab04.css rule for aside hover */
+aside:hover {
+    display: block;
+}
+
+/* List styles */
+#lists {
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+
+ol, ul, dl {
+    text-align: left;
+    margin: 15px 0;
+    padding-left: 30px;
+}
+
+dt {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+dd {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+/* Table styles */
+#tables {
+    float: right;
+    width: 50%;
+    text-align: center;
+    margin: auto;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+tfoot th {
+    background-color: #d1e7f7;
+}
+
+/* Hyperlinks section */
+#hyperlinks {
+    clear: both;
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+
+.link-list {
+    text-align: left;
+    margin: 15px 0;
+    padding-left: 30px;
+}
+
+/* Images section */
+#images {
+    float: right;
+    width: 50%;
+    text-align: center;
+}
+
+figure {
+    border: 2px solid #ccc;
+    padding: 10px;
+    margin: 15px auto;
+    display: inline-block;
+}
+
+figcaption {
+    margin-top: 8px;
+    font-style: italic;
+    color: #7f8c8d;
+}
+
+.thumbnail {
+    width: 150px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.thumbnail:hover {
+    transform: scale(1.05);
+}
+
+/* Footer styles */
+footer {
+    border-top: 4px double darkgray;
+    clear: both;
+    margin-top: 30px;
+    padding-top: 20px;
+}
+
+footer p {
+    display: inline-block;
+    width: 33%;
+    margin-bottom: 0;
+}
+
+footer p:first-child {
+    float: left;
+}
+
+footer p:nth-child(2) {
+    text-align: center;
+}
+
+footer p:last-child {
+    float: right;
+    text-align: right;
+}
+
+/* Box model diagram */
+.box-model {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.box-model-container {
+    display: inline-block;
+    position: relative;
+    margin: 20px;
+}
+
+.margin-box {
+    background-color: #ffeaa7;
+    padding: 20px;
+}
+
+.border-box {
+    border: 15px solid #74b9ff;
+    padding: 10px;
+}
+
+.padding-box {
+    background-color: #55efc4;
+    padding: 20px;
+}
+
+.content-box {
+    background-color: #dfe6e9;
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.box-label {
+    position: absolute;
+    font-size: 14px;
+    font-weight: bold;
+    color: #2d3436;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    #lists, #tables, #hyperlinks, #images {
+        width: 100%;
+        float: none;
+    }
+    
+    aside {
+        width: 100%;
+        float: none;
+    }
+}
